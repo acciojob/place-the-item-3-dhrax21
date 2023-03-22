@@ -1,2 +1,21 @@
+/* Apply flexbox properties to holder element */
+.holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-/* Your CSS Code here. */
+/* Ensure all items are evenly placed in the row */
+.holder > * {
+  flex: 1;
+  margin: 0 10px;
+}
+
+/* Adjust margin for the first and last items to make them flush with the edges */
+.holder > *:first-child {
+  margin-left: 0;
+}
+
+.holder > *:last-child {
+  margin-right: 0;
+}
